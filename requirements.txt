@@ -1,0 +1,4 @@
+# The model is small and runs on the CPU, so the standard PyTorch build is enough.
+# (For a GPU build see https://pytorch.org/get-started/locally/)
+torch>=2.0
+sentencepiece
