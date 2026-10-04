@@ -2,7 +2,7 @@
 
 A small GPT-style language model (decoder-only transformer) written in PyTorch to understand how the architecture works. It is trained on 100 short English sentences, so it is a learning project and not a useful language model.
 
-Built while following an online course on building a mini GPT with PyTorch: [Build a Mini GPT From Scratch with PyTorch | Step-by-Step LLM Tutorial / [link](https://youtu.be/5BQZEQUL9-k?si=dn-LrDdeBMceOoQf)].
+Built while following an online course on building a mini GPT with PyTorch: [Build a Mini GPT From Scratch with PyTorch | Step-by-Step LLM Tutorial](https://youtu.be/5BQZEQUL9-k).
 
 ## What it does
 
@@ -31,10 +31,9 @@ The script runs the whole pipeline in one file:
 
 ```
 .
-├── L3/
-│   ├── tinyGPT_tokenizer.py  # tokenizer, model, training, generation
-│   ├── transformer_block.py  # attention head, multi-head attention, feed forward, block
-│   └── corpus.txt            # 100 training sentences, one per line
+├── tinyGPT_tokenizer.py  # tokenizer, model, training, generation
+├── transformer_block.py  # attention head, multi-head attention, feed forward, block
+├── corpus.txt            # 100 training sentences, one per line
 ├── requirements.txt
 └── README.md
 ```
@@ -44,18 +43,18 @@ The script runs the whole pipeline in one file:
 Requires Python 3.10 or newer. The model is small and runs on the CPU, so no GPU is needed.
 
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/KevinUeffing/tinyGPT.git
+cd tinyGPT
 
 python -m venv venv
 # Windows (PowerShell):  venv\Scripts\Activate.ps1
 # Linux / macOS:         source venv/bin/activate
 
 pip install -r requirements.txt
-python L3/tinyGPT_tokenizer.py
+python tinyGPT_tokenizer.py
 ```
 
-The script prints the training loss every 300 steps, then a few generated texts, and finally how many of 200 generated samples are copied word for word from the corpus. It also writes `tokenizer.model` and `tokenizer.vocab` into the `L3` folder.
+The script prints the training loss every 300 steps, then a few generated texts, and finally how many of 200 generated samples are copied word for word from the corpus. It also writes `tokenizer.model` and `tokenizer.vocab` into the project folder.
 
 ## Results
 
